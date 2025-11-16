@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container */
+.list-group-item {
+  background: white !important;
+  border-radius: 25px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Header */
+.bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  padding: 30px !important;
+  margin: 0 !important;
+  border-radius: 25px 25px 0 0 !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  letter-spacing: 2px;
+}
+
+/* Card body */
+.card-body {
+  padding: 35px !important;
+  background: linear-gradient(to bottom, #f7f9fc, #ffffff) !important;
+  border-radius: 0 0 25px 25px !important;
+}
+
+/* Section headers */
+.bg-dark {
+  background: linear-gradient(135deg, #434343 0%, #000000 100%) !important;
+  padding: 15px !important;
+  border-radius: 15px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields */
+.form-control {
+  border: 2px solid #e1e8ed !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+}
+
+.form-control:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+  outline: none !important;
+  transform: scale(1.02);
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+/* Add button */
+.btn-outline-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding:  12px 35px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6) !important;
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+}
+
+.btn-outline-primary:active {
+  transform: translateY(-1px) !important;
+}
+
+/* Card text container */
+.card-text {
+  display: block;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Spacing adjustments */
+.mb-2 {
+  margin-bottom: 15px !important;
+}
+
+.mb-3 {
+  margin-bottom: 25px !important;
+}
+
+/* Todo list container */
+.card-body > div:last-child {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 200px;
+  max-height: 450px;
+  overflow-y: auto;
+  border: 2px solid #f0f0f0;
+}
+
+/* Scrollbar styling */
+.card-body > div:last-child::-webkit-scrollbar {
+  width: 10px;
+}
+
+.card-body > div:last-child::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.card-body > div:last-child::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+.card-body > div:last-child::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+  
+  .list-group-item {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .bg-primary {
+    font-size: 22px !important;
+    padding: 20px !important;
+  }
+  
+  .card-body {
+    padding: 20px !important;
+  }
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-group-item {
+  animation: slideIn 0.5s ease-out;
+}
